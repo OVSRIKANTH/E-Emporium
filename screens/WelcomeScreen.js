@@ -11,7 +11,7 @@ function WelcomeScreen({ navigation }) {
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-emporium.png")} />
-        <Text style={styles.tagline}>Sell What You Don't Need</Text>
+        <Text style={styles.tagline}>App for Local</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <AppButton onPress={ ()=> navigation.navigate("Login") } >Login</AppButton>

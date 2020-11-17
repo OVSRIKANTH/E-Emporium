@@ -20,51 +20,6 @@ const initialMessages = [
         description:"What is the model no for your camera?",
         image: require('../assets/mann.jpg')
     },
-    // {
-    //     id:3,
-    //     title:'T3T3T3T3T3',
-    //     description:"D3D3D3",
-    //     image: require('../assets/doom.jpg')
-    // },{
-    //     id:4,
-    //     title:'T4T4T4T4T4',
-    //     description:"D1D1D1",
-    //     image: require('../assets/apple_logo.jpg')
-    // },
-    // {
-    //     id:5,
-    //     title:'T5T5T5T5T5',
-    //     description:"D5D5D5",
-    //     image: require('../assets/einstein2.jpg')
-    // },
-    // {
-    //     id:6,
-    //     title:'T6T6T6T6T6',
-    //     description:"D6D6D6",
-    //     image: require('../assets/ListItem_photo.jpg')
-    // },{
-    //     id:7,
-    //     title:'T7T7T7T7T7',
-    //     description:"D7D7D7",
-    //     image: require('../assets/Skull.jpg')
-    // },
-    // {
-    //     id:8,
-    //     title:'T8T8T8T8T8',
-    //     description:"D8D8D8",
-    //     image: require('../assets/einstein1.jpg')
-    // },
-    // {
-    //     id:9,
-    //     title:'T3T3T3T3T3',
-    //     description:"D3D3D3",
-    //     image: require('../assets/doom.jpg')
-    // },{
-    //     id:10,
-    //     title:'T1T1T1T1T1',
-    //     description:"D1D1D1",
-    //     image: require('../assets/Skull.jpg')
-    // },
     {
         id:11,
         title:"lily",

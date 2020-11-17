@@ -1,7 +1,6 @@
 import React,{useState, useContext} from "react";
 import { StyleSheet } from "react-native";
 import * as Yup from "yup";
-import jwtDecode from "jwt-decode";
 
 import Screen from "../components/Screen";
 import {
@@ -12,9 +11,6 @@ import {
 } from "../components/forms";
 import usersApi from '../api/users';
 import authApi from '../api/authApi';
-import AuthContext from "../auth/context";
-import authStorage from "../auth/storage";
-import useApi from "../hooks/useApi";
 import useAuth from "../auth/useAuth"
 
 
@@ -44,12 +40,8 @@ function RegisterScreen() {
     const {data: authToken} = await authApi.login(userInfo);
     console.log(authToken);
     auth.logIn(authToken);
-    
-
   };
   
-
-
   return (
     <Screen style={styles.container}>
       <ErrorMessage error={error} visible={error}/>

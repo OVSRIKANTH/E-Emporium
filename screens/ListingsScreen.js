@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { View,StyleSheet,FlatList, ActivityIndicator } from 'react-native';
 import Card from '../components/Card'
 import Screen from '../components/Screen'
@@ -42,54 +42,3 @@ const styles = StyleSheet.create({
         backgroundColor:'#f4f4f4'
     }
 })
-
-
-
-
-
-
-{/*
-const listings = [
-    {
-        id:1,
-        title:'Study Table for Sale',
-        price: '100',
-        image: require('../assets/studytable.jpg')
-    },
-    {
-        id:2,
-        title:'Sofa and 2 Chairs for Sale',
-        price: '500',
-        image: require('../assets/sofachairs.jpg')
-    },
-    {
-        id:3,
-        title:'Bench for Sale',
-        price: '200',
-        image: require('../assets/bench.jpg')
-    },
-    {
-        id:4,
-        title:'Lamp for Sale',
-        price: '10',
-        image: require('../assets/lamp.jpg')
-    },
-]
-*/}
-
- // const [listings, setlistings] = useState([]);
-    // const [error, setError] = useState(false);
-    // const [loading, setLoading] = useState(false);
-
-    // const loadListings = async () => {
-    //     setLoading(true);
-    //     const response = await listingsApi.getListings(); 
-    //     setLoading(false); 
-
-    //     if(!response.ok) return setError(true);
-
-    //     setError(false);
-    //     setlistings(response.data);   
-
-    //     //return {request, data, error, loading};
-    // }

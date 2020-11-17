@@ -39,7 +39,7 @@ function LoginScreen(props) {
       <ErrorMessage error="Entered Email and/or password are incorrect" visible={loginFailed}/>
       <AppForm
         initialValues={{ email: "", password: "" }}
-        onSubmit={handlesubmit}  //({values})=>{console.log(values)}
+        onSubmit={handlesubmit}  
         validationSchema={validationSchema}
       >
         <AppFormField
