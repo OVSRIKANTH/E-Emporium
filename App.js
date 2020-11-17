@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { StyleSheet } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
 import AuthNavigator from './navigation/AuthNavigator';
@@ -30,14 +29,3 @@ export default function App() {
     
   );
 }
-
-
-
-const styles = StyleSheet.create({
-  container:{
-    backgroundColor:"#000",
-    flex:1,
-    
-  }
-})
-

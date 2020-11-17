@@ -22,13 +22,13 @@ const initialMessages = [
     },
     {
         id:11,
-        title:"lily",
+        title:"Lily",
         description:"I'm interested in this item. Do you provide free delivery?",
         image: require('../assets/man6.jpg')
     },
     {
         id:12,
-        title:'steve',
+        title:'Steve',
         description:"Your product was wonderful.Thanks!!",
         image: require('../assets/manc.jpg')
     }
