@@ -3,7 +3,8 @@ import { View,StyleSheet,Image } from 'react-native';
 
 import AppText from '../components/AppText'
 import ListItem from '../components/lists/ListItem'
-import ContactSellerForm from '../components/ContactSellerForm'
+import ContactSellerForm from '../components/ContactSellerForm';
+import Screen from '../components/Screen'
 
 import colors from '../config/colors';
 
@@ -11,25 +12,27 @@ function ListingDetailsScreen({ route }) {
     const listing = route.params
     
     return (
-        <>
-       <View>
+       <Screen style={styles.container}>
            <Image style={styles.image} source={{uri:listing.images[0].url}}/>
            <View style={styles.detailscontainer}>
                <AppText style={styles.title}>{listing.title}</AppText>
                <AppText style={styles.subtitle}>${listing.price}</AppText>
            </View>
            <ListItem image={require('../assets/manc.jpg')} title={"Tony"} subtitle={"9 Listings"}/>
-       </View>
-       <View style={styles.contact}>
-       <ContactSellerForm listing={listing}/>
-       </View>
-       </>
+           <View style={styles.contact} >
+           <ContactSellerForm listing={listing}/>
+           </View>
+
+       </Screen>
     );
 }
 
 export default ListingDetailsScreen;
 
 const styles = StyleSheet.create({
+    container:{
+        flex:1
+    },
     image:{
         width:'100%',
         height:250
@@ -47,8 +50,8 @@ const styles = StyleSheet.create({
         color:colors.secondry
     },
     contact:{
-        flex:1,
-        paddingBottom:65,
-        justifyContent:'flex-end',
+        marginTop:50,
+        paddingHorizontal:10    
+       
     }
 })
