@@ -3,6 +3,7 @@ import { View,StyleSheet,Image } from 'react-native';
 
 import AppText from '../components/AppText'
 import ListItem from '../components/lists/ListItem'
+import ContactSellerForm from '../components/ContactSellerForm'
 
 import colors from '../config/colors';
 
@@ -10,6 +11,7 @@ function ListingDetailsScreen({ route }) {
     const listing = route.params
     
     return (
+        <>
        <View>
            <Image style={styles.image} source={{uri:listing.images[0].url}}/>
            <View style={styles.detailscontainer}>
@@ -18,6 +20,10 @@ function ListingDetailsScreen({ route }) {
            </View>
            <ListItem image={require('../assets/manc.jpg')} title={"Tony"} subtitle={"9 Listings"}/>
        </View>
+       <View style={styles.contact}>
+       <ContactSellerForm listing={listing}/>
+       </View>
+       </>
     );
 }
 
@@ -39,5 +45,10 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         marginVertical:10,
         color:colors.secondry
+    },
+    contact:{
+        flex:1,
+        paddingBottom:65,
+        justifyContent:'flex-end',
     }
 })

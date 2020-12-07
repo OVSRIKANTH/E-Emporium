@@ -6,6 +6,8 @@ import ListItem from '../components/lists/ListItem';
 import ListItemSeperator from '../components/lists/ListItemSeperator'
 import ListItemDeleteAction from '../components/lists/ListItemDeleteAction'
 import Screen from '../components/Screen'
+import messageApi from '../api/messages'
+import authStorage from '../auth/storage';
 
 const initialMessages = [
     {
@@ -45,6 +47,25 @@ function MessageScreen(props) {
         
     }
 
+      const handleRefresh = async () => {
+        const user = await authStorage.getUser();
+        const result = await messageApi.getMessages(user);
+        
+
+        if(result.ok) {
+            //setMessages(result.data);
+            const Messages = result.data;
+            const final = Messages.map((msg,index)=>{
+                                                if(index%3===0)  msg={...msg, image:require(`../assets/man0.jpg`)}; 
+                                                else if(index%3===1)  msg={...msg, image:require(`../assets/man1.jpg`)};
+                                                else  msg={...msg, image:require(`../assets/man2.jpg`)};                                        
+                                                return msg; })
+            setMessages(final);
+            console.log(final);}
+        else console.log(result);
+        
+    }
+
     return (
         <Screen>
 
@@ -56,15 +77,8 @@ function MessageScreen(props) {
                                                         /> }
                 ItemSeparatorComponent= {()=><ListItemSeperator />}     // or {ListItemSeperator}
                 refreshing={refreshing}
-                onRefresh=   {   ()=>               //this is where we are going to call backend to retrive new msgs(updating)
-                                        setMessages([{
-                                            id:5,
-                                            title:'T5T5T5T5T5',
-                                            description:"D5D5D5",
-                                            image: require('../assets/mann.jpg')
-                                        },
-
-                                        ])
+                onRefresh=   {   ()=>   handleRefresh()            //this is where we are going to call backend to retrive new msgs(updating)
+               
                 }
             
             />
