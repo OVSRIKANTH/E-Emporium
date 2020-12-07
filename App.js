@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-
+//192.168.1.6
 import AuthNavigator from './navigation/AuthNavigator';
 import AppNavigator from './navigation/AppNavigator';
 import NavigationTheme from './navigation/NavigationTheme';
